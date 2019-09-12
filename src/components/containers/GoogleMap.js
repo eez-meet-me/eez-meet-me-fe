@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import Markers from '../marker/Markers';
+import InformationWindow from '../infoWindow/InfoWindow';
 
 class GoogleMap extends Component {
 
@@ -18,7 +19,12 @@ class GoogleMap extends Component {
       { latitude: 47.5524695, longitude: -122.0425407, name: 'some name' }],
     showingInfoWindow: false,
     activeMarker: {},
-    selectedPlace: {}
+    selectedPlace: {},
+    pin: {
+      title: 'Alchemy',
+      location: '1830 NE 132nd st',
+      time: '10am - noon'
+    }
   }
 
   onMarkerClick = (props, marker, e) => {
@@ -29,12 +35,17 @@ class GoogleMap extends Component {
     });
   }
 
-  // onClose = () => {
-
-  // }
+  onClose = props => {
+    if(this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      });
+    }
+  }
 
   render() {
-    const { locations } = this.state;
+    const { locations, activeMarker, showingInfoWindow, pin } = this.state;
 
     return (
       <Map
@@ -44,6 +55,11 @@ class GoogleMap extends Component {
         initialCenter={{ lat: 47.444, lng: -122.176 }}
       >
         <Markers onClick={this.onMarkerClick} locations={locations} />
+        <InformationWindow
+          marker={activeMarker}
+          visible={showingInfoWindow}
+          onClose={this.onClose}
+          pin={pin} />
       </Map>
     );
   }
