@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Marker } from 'google-maps-react';
 
-function Markers({ locations, onClick }) {
+function Markers({ locations, onClick, ...props }) {
   const markerElements = locations.map((location, i) => {
     return (
-      <Marker key={i} id={i} position={{
+      <Marker {...props} key={i} id={i} position={{
         lat: location.latitude, 
         lng: location.longitude
       }}
