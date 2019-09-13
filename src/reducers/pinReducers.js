@@ -4,9 +4,11 @@ const initialState = {
   pins: []
 };
 
-export default function reducers( state = initialState, action) {
+export default function reducer(state = initialState, action) {
   switch(action.type) {
     case GET_PINS:
-      return { pins: [] }
+      return { ...state, pins: action.payload };
+    default: 
+      return state;
   }
 }
