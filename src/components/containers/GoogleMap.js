@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import Markers from '../marker/Markers';
 import InformationWindow from '../infoWindow/InfoWindow';
+import { getAllPins } from '../../services/pindropApi';
 
 class GoogleMap extends Component {
 
   static propTypes = {
     google: PropTypes.object.isRequired
+  }
+
+  componentDidMount() {
+    getAllPins()
+      .then(console.log());
   }
 
   state = {
