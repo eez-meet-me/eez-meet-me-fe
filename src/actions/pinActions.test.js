@@ -12,5 +12,4 @@ describe('pin actions', () => {
     expect(action.type).toBe(GET_PINS);
     expect(action.payload).toBe(payload);
   });
-
 });
