@@ -15,9 +15,9 @@ function Markers({ locations, onClick, ...props }) {
   });
   
   return (
-    <>
+    <section>
       {markerElements}
-    </>
+    </section>
   );
 }
 
