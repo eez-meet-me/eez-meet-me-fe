@@ -13,4 +13,3 @@ export const getAllPins = () => {
       return json;
     });
 };
-

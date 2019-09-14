@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Marker } from 'google-maps-react';
 
-function Markers({ locations, onClick, ...props }) {
-  const markerElements = locations.map((location, i) => {
+function Markers({ pins, onClick, ...props }) {
+  const markerElements = pins.map((pin, i) => {
     return (
-      <Marker {...props} key={i} id={i} position={{
-        lat: location.latitude, 
-        lng: location.longitude
+      <Marker {...props} key={i} id={pin._id} position={{
+        lat: pin.lat, 
+        lng: pin.lng
       }}
-      name={location.name}
+      name={pin.where}
       onClick={onClick}/>
     );
   });
@@ -22,7 +22,7 @@ function Markers({ locations, onClick, ...props }) {
 }
 
 Markers.propTypes = {
-  locations: PropTypes.array.isRequired,
+  pins: PropTypes.array.isRequired,
   onClick: PropTypes.func.isRequired
 };
 
