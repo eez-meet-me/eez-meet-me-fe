@@ -4,11 +4,13 @@ import { InfoWindow } from 'google-maps-react';
 
 function InformationWindow({ marker, visible, onClose, pins, ...props }) {
   const pin = pins.map((pin) => {
-    if(pin._id === marker.id) {
+    if(pin.id === marker.id) {
       return pin;
     }
   });
-
+  // console.log(pins, 'pins');
+  // console.log(pin, 'single pin');
+  console.log(marker, 'marker');
   return (
     <InfoWindow
       {...props}
