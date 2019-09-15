@@ -22,12 +22,6 @@ export class FormPersonalDetails extends Component {
       <MuiThemeProvider>
         <React.Fragment>
           <AppBar title="Enter Personal Details" />
-          <TextField
-            hintText="Enter Your Occupation"
-            floatingLabelText="Occupation"
-            onChange={handleChange('occupation')}
-            defaultValue={values.occupation}
-          />
           <br />
           <TextField
             hintText="Enter Your City"
