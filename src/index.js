@@ -3,13 +3,13 @@ import { render } from 'react-dom';
 import App from './components/App';
 import Auth0Provider from './Auth0Provider';
 import store from './store';
-import { Provider } from 'react-redux'; 
+import { Provider } from 'react-redux';
 
 render(
   <Auth0Provider
-    domain="steezli.auth0.com"
-    client_id="nZgVOv7Kqq52vqJxKSVMKmoJGSe9y0HM"
-    redirect_uri="http://localhost:7890"
+    domain={process.env.AUTH_DOMAIN}
+    client_id={process.env.AUTH0_CLIENT_ID}
+    redirect_uri={process.env.AUTH0_CALLBACK}
   >
     <Provider store={store}>
       <App />

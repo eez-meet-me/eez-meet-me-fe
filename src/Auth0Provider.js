@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import createAuth0Client from '@auth0/auth0-spa-js';
+import { setToken } from './services/request';
+import { getUsers, postUser } from './services/userApi';
 
 const DEFAULT_REDIRECT_CALLBACK = () => {
   window.history.replaceState({},
@@ -9,6 +11,17 @@ const DEFAULT_REDIRECT_CALLBACK = () => {
 
 export const Auth0Context = React.createContext();
 export const useAuth0 = () => useContext(Auth0Context);
+
+// export const withSession = Comp => {
+//   return function WithSessionHOC(props) {
+//     const { isAuthenticated, loading, auth0Client } = useAuth0();
+//     if(!isAuthenticated && !loading) auth0Client.loginWithRedirect();
+
+//     if(!isAuthenticated || loading) return null;
+
+//     return <Comp {...props} />;
+//   };
+// };
 
 export default function Auth0Provider({ children, onRedirectCallback = DEFAULT_REDIRECT_CALLBACK, ...initOptions }) {
   const [isAuthenticated, updateIsAuthenticated] = useState(false);
@@ -32,6 +45,20 @@ export default function Auth0Provider({ children, onRedirectCallback = DEFAULT_R
       if(isAuthenticated) {
         const user = await auth0.getUser();
         setUser(user);
+
+        const claims = await auth0.getIdTokenClaims();
+        setToken(claims.__raw);
+        
+        const users = await getUsers();
+        let doesExist = false;
+        users.forEach(userDb => {
+          if(userDb.authId === user.sub) {
+            doesExist = true;
+          } 
+        });
+        if(!doesExist) {
+          postUser();
+        }
       }
   
       updateLoading(false);
