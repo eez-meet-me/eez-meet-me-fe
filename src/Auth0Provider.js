@@ -12,16 +12,16 @@ const DEFAULT_REDIRECT_CALLBACK = () => {
 export const Auth0Context = React.createContext();
 export const useAuth0 = () => useContext(Auth0Context);
 
-// export const withSession = Comp => {
-//   return function WithSessionHOC(props) {
-//     const { isAuthenticated, loading, auth0Client } = useAuth0();
-//     if(!isAuthenticated && !loading) auth0Client.loginWithRedirect();
+export const withSession = Comp => {
+  return function WithSessionHOC(props) {
+    const { isAuthenticated, loading, auth0Client } = useAuth0();
+    if(!isAuthenticated && !loading) auth0Client.loginWithRedirect();
 
-//     if(!isAuthenticated || loading) return null;
+    if(!isAuthenticated || loading) return null;
 
-//     return <Comp {...props} />;
-//   };
-// };
+    return <Comp {...props} />;
+  };
+};
 
 export default function Auth0Provider({ children, onRedirectCallback = DEFAULT_REDIRECT_CALLBACK, ...initOptions }) {
   const [isAuthenticated, updateIsAuthenticated] = useState(false);
