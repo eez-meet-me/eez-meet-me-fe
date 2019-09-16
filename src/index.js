@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 
 render(
   <Auth0Provider
-    domain={process.env.AUTH_DOMAIN}
+    domain={process.env.AUTH0_DOMAIN}
     client_id={process.env.AUTH0_CLIENT_ID}
     redirect_uri={process.env.AUTH0_CALLBACK}
   >
