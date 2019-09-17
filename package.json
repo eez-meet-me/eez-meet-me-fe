@@ -26,8 +26,10 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
+    "@material-ui/core": "^4.4.2",
     "google-map-react": "^1.1.4",
     "google-maps-react": "^2.0.2",
+    "material-ui": "^0.20.2",
     "promise-middleware-redux": "^1.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

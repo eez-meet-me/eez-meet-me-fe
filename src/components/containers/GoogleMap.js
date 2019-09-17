@@ -6,6 +6,8 @@ import Markers from '../marker/Markers';
 import InformationWindow from '../infoWindow/InfoWindow';
 import { getPinsList } from '../../selectors/pinSelectors';
 import { getPins } from '../../actions/pinActions';
+// import Play from '../Play';
+
 
 class GoogleMap extends Component {
 
@@ -46,6 +48,7 @@ class GoogleMap extends Component {
     const { activeMarker, showingInfoWindow } = this.state;
     const { pins } = this.props;
     return (
+      
       <Map
         google={this.props.google}
         zoom={8}
@@ -59,6 +62,7 @@ class GoogleMap extends Component {
           onClose={this.onClose}
           pins={pins} />
       </Map>
+      
     );
   }
 }
