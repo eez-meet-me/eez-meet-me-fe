@@ -8,13 +8,12 @@ export default (url, options = {}) => {
     'Content-Type': 'application/json',
     Authorization: `Bearer ${token}`
   };
-  return (
-    fetch(url, options)
-      .then(res => {
-        if(!res.ok) {
-          res.json().then(error => { throw error; });
-        }
-        return res.json();
-      })
-  );
+  return fetch(url, options)
+    .then(res => {
+      if(!res.ok) {
+        console.log('request error');
+        return res.json().then(error => { throw error; });
+      }
+      return res.json();
+    });
 };
