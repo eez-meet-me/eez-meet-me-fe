@@ -1,7 +1,7 @@
 import request from './request';
 
 export const getAllPins = () => {
-  return fetch('http://localhost:7891/api/v1/pins')
+  return fetch('https://pindrop-alchemy.herokuapp.com/api/v1/pins')
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'Unable to fetch pins';
@@ -17,8 +17,8 @@ export const getAllPins = () => {
 };
 
 export const postPin = (where, address, startTime, endTime, message) => {
-  return request('http://localhost:7891/api/v1/pins', {
+  return request('https://pindrop-alchemy.herokuapp.com/api/v1/pins', {
     method: 'Post',
     body: JSON.stringify({ where, address, startTime, endTime, message })
-  })
+  });
 };
