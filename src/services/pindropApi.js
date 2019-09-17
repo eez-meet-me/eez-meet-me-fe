@@ -1,3 +1,5 @@
+import request from './request';
+
 export const getAllPins = () => {
   return fetch('http://localhost:7891/api/v1/pins')
     .then(res => ([res.ok, res.json()]))
@@ -12,4 +14,11 @@ export const getAllPins = () => {
       console.log(json);
       return json;
     });
+};
+
+export const postPin = (where, address, startTime, endTime, message) => {
+  return request('http://localhost:7891/api/v1/pins', {
+    method: 'Post',
+    body: JSON.stringify({ where, address, startTime, endTime, message })
+  })
 };

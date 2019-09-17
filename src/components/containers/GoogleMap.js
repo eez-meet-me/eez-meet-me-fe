@@ -6,6 +6,9 @@ import Markers from '../marker/Markers';
 import InformationWindow from '../infoWindow/InfoWindow';
 import { getPinsList } from '../../selectors/pinSelectors';
 import { getPins } from '../../actions/pinActions';
+import AddPinContainer from './AddPinContainer';
+import userLogout from '../UserLogout';
+import UserLogout from '../UserLogout';
 
 class GoogleMap extends Component {
 
@@ -37,7 +40,7 @@ class GoogleMap extends Component {
     if(this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
-        activeMarker: null
+        activeMarker: {}
       });
     }
   }
@@ -46,6 +49,9 @@ class GoogleMap extends Component {
     const { activeMarker, showingInfoWindow } = this.state;
     const { pins } = this.props;
     return (
+      <>
+        <AddPinContainer />
+        <UserLogout />
       <Map
         google={this.props.google}
         zoom={8}
@@ -59,6 +65,7 @@ class GoogleMap extends Component {
           onClose={this.onClose}
           pins={pins} />
       </Map>
+      </>
     );
   }
 }

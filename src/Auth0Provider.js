@@ -49,16 +49,7 @@ export default function Auth0Provider({ children, onRedirectCallback = DEFAULT_R
         const claims = await auth0.getIdTokenClaims();
         setToken(claims.__raw);
         
-        const users = await getUsers();
-        let doesExist = false;
-        users.forEach(userDb => {
-          if(userDb.authId === user.sub) {
-            doesExist = true;
-          } 
-        });
-        if(!doesExist) {
-          postUser();
-        }
+        postUser();
       }
   
       updateLoading(false);

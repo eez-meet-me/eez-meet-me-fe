@@ -1,4 +1,4 @@
-import { GET_PINS } from '../actions/pinActions';
+import { GET_PINS, POST_PIN } from '../actions/pinActions';
 
 const initialState = {
   pins: []
@@ -6,6 +6,8 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
+    case POST_PIN:
+      return { ...state, pins: [...state.pins, action.payload] };
     case GET_PINS:
       return { ...state, pins: action.payload };
     default: 
