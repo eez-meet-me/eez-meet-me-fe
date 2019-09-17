@@ -1,4 +1,4 @@
-import request, { setToken } from './request';
+import request from './request';
 
 export const getAllPins = () => {
   return fetch('http://localhost:7891/api/v1/pins')
@@ -17,14 +17,8 @@ export const getAllPins = () => {
 };
 
 export const postPin = (where, address, startTime, endTime, message) => {
-  return (
-    request('http://localhost:7891/api/v1/pins', {
-      method: 'Post',
-      body: JSON.stringify({ where, address, startTime, endTime, message }),
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${setToken}`
-      }
-    })
-  );
+  return request('http://localhost:7891/api/v1/pins', {
+    method: 'Post',
+    body: JSON.stringify({ where, address, startTime, endTime, message })
+  })
 };
