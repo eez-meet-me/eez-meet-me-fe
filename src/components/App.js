@@ -11,10 +11,11 @@ import CreatePin from '../components/containers/CreatePin';
 export default function App() {
   return (
     <>
+      <CreatePin />
       <Router>
         <Switch>
           <Route path="/" component={withSession(GoogleMap)}/>
-          <Route path="/pin" component={withSession(CreatePin)}/>
+          {/* <Route path="/pin" component={withSession(CreatePin)}/> */}
         </Switch>
       </Router>
     </>
