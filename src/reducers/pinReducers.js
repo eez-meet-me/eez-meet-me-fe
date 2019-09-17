@@ -7,7 +7,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case POST_PIN:
-      return { ...state, pin: [...state, action.payload] };
+      return { ...state, pins: [...state.pins, action.payload] };
     case GET_PINS:
       return { ...state, pins: action.payload };
     default: 
