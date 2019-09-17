@@ -7,6 +7,8 @@ import InformationWindow from '../infoWindow/InfoWindow';
 import { getPinsList } from '../../selectors/pinSelectors';
 import { getPins } from '../../actions/pinActions';
 import AddPinContainer from './AddPinContainer';
+import userLogout from '../UserLogout';
+import UserLogout from '../UserLogout';
 
 class GoogleMap extends Component {
 
@@ -38,7 +40,7 @@ class GoogleMap extends Component {
     if(this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
-        activeMarker: null
+        activeMarker: {}
       });
     }
   }
@@ -49,6 +51,7 @@ class GoogleMap extends Component {
     return (
       <>
         <AddPinContainer />
+        <UserLogout />
       <Map
         google={this.props.google}
         zoom={8}
