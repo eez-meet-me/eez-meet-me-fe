@@ -7,7 +7,6 @@ import InformationWindow from '../infoWindow/InfoWindow';
 import { getPinsList } from '../../selectors/pinSelectors';
 import { getPins } from '../../actions/pinActions';
 import AddPinContainer from './AddPinContainer';
-import userLogout from '../UserLogout';
 import UserLogout from '../UserLogout';
 
 class GoogleMap extends Component {
@@ -19,7 +18,9 @@ class GoogleMap extends Component {
   }
 
   componentDidMount() {
-    this.props.fetch();
+    setInterval(() => {
+      this.props.fetch();
+    }, 1000);
   }
 
   state = {
