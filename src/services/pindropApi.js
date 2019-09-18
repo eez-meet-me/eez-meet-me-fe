@@ -11,7 +11,6 @@ export const getAllPins = () => {
       return json;
     })
     .then(json => {
-      console.log(json);
       return json;
     });
 };

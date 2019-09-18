@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAuth0 } from '../Auth0Provider';
-import { withSession } from '../Auth0Provider';
+import { useAuth0 } from '../../Auth0Provider';
+import { withSession } from '../../Auth0Provider';
 
 
 function UserLogout() {

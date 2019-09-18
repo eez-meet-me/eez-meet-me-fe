@@ -6,8 +6,8 @@ import Markers from '../marker/Markers';
 import InformationWindow from '../infoWindow/InfoWindow';
 import { getPinsList } from '../../selectors/pinSelectors';
 import { getPins } from '../../actions/pinActions';
+import Header from '../header/Header';
 import AddPinContainer from './AddPinContainer';
-import UserLogout from '../UserLogout';
 
 class GoogleMap extends Component {
 
@@ -21,7 +21,12 @@ class GoogleMap extends Component {
     this.props.fetch();
     setInterval(() => {
       this.props.fetch();
-    }, 30000);
+    }, 1000);
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return nextProps.pins.length !== this.props.pins.length ||
+      !nextProps.pins.every((pin, i) => pin._id === this.props.pins[i]._id);
   }
 
   state = {
@@ -52,8 +57,9 @@ class GoogleMap extends Component {
     const { pins } = this.props;
     return (
       <>
-        <AddPinContainer />
-        <UserLogout />
+        {/* <AddPinContainer />
+        <UserLogout /> */}
+      <Header />
       <Map
         google={this.props.google}
         zoom={8}
