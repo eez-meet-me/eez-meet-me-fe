@@ -4,12 +4,12 @@ import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import { Link } from 'react-router-dom';
+import { Link } from '@material-ui/core';
+import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles({
   list: {
@@ -21,9 +21,6 @@ const useStyles = makeStyles({
 });
 
 export default function TemporaryDrawer() {
-  const renderLink = () => {
-    <Link to={'/fun'} />;
-  };
 
   const classes = useStyles();
   const [state, setState] = React.useState({
@@ -43,19 +40,19 @@ export default function TemporaryDrawer() {
     >
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text} component={renderLink}>
+          <Link key={text} component={RouterLink} to="/fun">
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
-          </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
       <List>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
+          <Link key={text} component={RouterLink} to="/fun">
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
-          </ListItem>
+          </Link>
         ))}
       </List>
     </div>

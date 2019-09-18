@@ -6,6 +6,7 @@ import Markers from '../marker/Markers';
 import InformationWindow from '../infoWindow/InfoWindow';
 import { getPinsList } from '../../selectors/pinSelectors';
 import { getPins } from '../../actions/pinActions';
+import Play from '../play/Play';
 
 class GoogleMap extends Component {
 
@@ -52,6 +53,7 @@ class GoogleMap extends Component {
         style={{ width: '100%', height: '100%' }}
         initialCenter={{ lat: 45.5234166, lng: -122.6808846 }}
       >
+        <Play />
         <Markers onClick={this.onMarkerClick} pins={pins} />
         <InformationWindow
           marker={activeMarker}
