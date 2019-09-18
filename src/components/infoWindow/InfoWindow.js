@@ -19,6 +19,7 @@ function InformationWindow({ marker, visible, onClose, pins, ...props }) {
         <h3>{pin.where}</h3>
         <p>{pin.address}</p>
         <p>{pin.startTime} - {pin.endTime}</p>
+        <p>{pin.message}</p>
       </section>
     </InfoWindow>
   );
