@@ -9,7 +9,6 @@ function AddPin({ handleSubmit }) {
   const [message, updateMessage] = useState('');
 
   const onSubmit = event => {
-    console.log(where, 'onSubmit');
     event.preventDefault();
     handleSubmit(where, address, startTime, endTime, message);
   };
