@@ -21,13 +21,28 @@ class GoogleMap extends Component {
     this.props.fetch();
     setInterval(() => {
       this.props.fetch();
-    }, 60000);
+    }, 10000);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
+
+    //new code
+    // if(nextProps.pins.length === this.props.pins.length || 
+    //   nextProps.pins.every((pin, i) => pin && this.props.pins[i] 
+    //   console.log(this.props.pins);
+    //   && pin._id === this.props.pins[i]._id)) {
+    //   console.log('false');
+    //   return false;
+    // } else {
+    //   console.log('true');
+
+    //   return true;
+    // }
+
     return nextState.activeMarker !== this.state.activeMarker ||
       nextProps.pins.length !== this.props.pins.length ||
       !nextProps.pins.every((pin, i) => pin._id === this.props.pins[i]._id);
+      
   }
 
   state = {
