@@ -1,4 +1,9 @@
 .Header {
   color: steelblue;
-  height: 15%vh;
+  height: 50px;
+  background-color: black;
+  h1 {
+    margin: 0px;
+    text-align: center;
+  }
 }

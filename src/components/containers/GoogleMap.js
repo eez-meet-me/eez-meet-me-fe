@@ -6,6 +6,7 @@ import Markers from '../marker/Markers';
 import InformationWindow from '../infoWindow/InfoWindow';
 import { getPinsList } from '../../selectors/pinSelectors';
 import { getPins } from '../../actions/pinActions';
+import Header from '../header/Header';
 import AddPinContainer from './AddPinContainer';
 import UserLogout from '../UserLogout';
 
@@ -52,8 +53,9 @@ class GoogleMap extends Component {
     const { pins } = this.props;
     return (
       <>
-        <AddPinContainer />
-        <UserLogout />
+        {/* <AddPinContainer />
+        <UserLogout /> */}
+      <Header />
       <Map
         google={this.props.google}
         zoom={8}
