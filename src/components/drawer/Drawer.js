@@ -53,8 +53,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div className={styles.Drawer}>
-      <Button 
-        onClick={toggleDrawer('left', true)}>Menu</Button>
+      <Button onClick={toggleDrawer('left', true)}>Menu</Button>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}
         <AddPinContainer />

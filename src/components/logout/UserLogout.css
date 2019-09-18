@@ -1,9 +1,10 @@
-.button {
-  color: lightblue;
-  background-color: black;
-  border: none;
-  font-size: 1em;
-  font-weight: bold;
+.UserLogout {
+  button {
+    color: lightblue;
+    font-family: roboto;
+    font-size: 1 em;
+    font-weight: bold;
+  }
 }
 
 section {
