@@ -43,7 +43,6 @@ class GoogleMap extends Component {
     return nextState.activeMarker !== this.state.activeMarker ||
       nextProps.pins.length !== this.props.pins.length ||
       !nextProps.pins.every((pin, i) => pin._id === this.props.pins[i]._id);
-      
   }
 
   state = {
