@@ -1,7 +1,7 @@
 .Header {
-  color: steelblue;
-  height: 50px;
-  background-color: coral;
+  color: lightblue;
+  height: 70px;
+  background-color: rgb(22, 21, 20);
   display: flex;
   align-items: center;
   justify-content: space-between;
