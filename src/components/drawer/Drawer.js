@@ -40,21 +40,9 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <Link key={text} component={RouterLink} to="/fun">
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </Link>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <Link key={text} component={RouterLink} to="/fun">
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </Link>
-        ))}
+        <Link component={RouterLink} to="/fun">
+          <ListItemText primary='Profile' />
+        </Link>
       </List>
     </div>
   );
@@ -64,6 +52,7 @@ export default function TemporaryDrawer() {
       <Button onClick={toggleDrawer('left', true)}>Menu</Button>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}
+        <AddPin />
       </Drawer>
     </div>
   );
