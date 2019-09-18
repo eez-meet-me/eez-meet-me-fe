@@ -18,6 +18,7 @@ class GoogleMap extends Component {
   }
 
   componentDidMount() {
+    this.props.fetch();
     setInterval(() => {
       this.props.fetch();
     }, 30000);
@@ -26,7 +27,7 @@ class GoogleMap extends Component {
   state = {
     showingInfoWindow: false,
     activeMarker: {},
-    selectedPlace: {},
+    selectedPlace: {}
   }
 
   onMarkerClick = (props, marker, e) => {
