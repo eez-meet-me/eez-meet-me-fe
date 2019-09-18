@@ -20,7 +20,7 @@ class GoogleMap extends Component {
   componentDidMount() {
     setInterval(() => {
       this.props.fetch();
-    }, 1000);
+    }, 30000);
   }
 
   state = {
