@@ -11,6 +11,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import { Link } from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
 import AddPinContainer from '../containers/AddPinContainer';
+import styles from './Drawer.css';
 
 const useStyles = makeStyles({
   list: {
@@ -51,8 +52,9 @@ export default function TemporaryDrawer() {
   );
 
   return (
-    <div>
-      <Button onClick={toggleDrawer('left', true)}>Menu</Button>
+    <div className={styles.Drawer}>
+      <Button 
+        onClick={toggleDrawer('left', true)}>Menu</Button>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}
         <AddPinContainer />
