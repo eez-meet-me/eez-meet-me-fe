@@ -4,7 +4,7 @@ import { setToken } from './services/request';
 import { getUsers, postUser } from './services/userApi';
 
 const DEFAULT_REDIRECT_CALLBACK = () => {
-  window.history.replaceState({},
+  window.history.pushState({},
     document.title,
     window.location.pathname);
 };
