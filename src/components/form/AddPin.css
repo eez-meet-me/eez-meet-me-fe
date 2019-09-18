@@ -1,0 +1,4 @@
+.addPinForm {
+  display: flex;
+  flex-direction: column;
+}
