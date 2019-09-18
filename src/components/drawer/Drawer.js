@@ -10,7 +10,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import { Link } from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
-import AddPin from '../form/AddPin';
+import AddPinContainer from '../containers/AddPinContainer';
 
 const useStyles = makeStyles({
   list: {
@@ -40,8 +40,11 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        <Link component={RouterLink} to="/fun">
+        <Link component={RouterLink} to="/AboutUs">
           <ListItemText primary='Profile' />
+        </Link>
+        <Link component={RouterLink} to="/Profile">
+          <ListItemText primary='About us' />
         </Link>
       </List>
     </div>
@@ -52,7 +55,7 @@ export default function TemporaryDrawer() {
       <Button onClick={toggleDrawer('left', true)}>Menu</Button>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}
-        <AddPin />
+        <AddPinContainer />
       </Drawer>
     </div>
   );
