@@ -4,8 +4,6 @@ import { createPin } from '../../actions/pinActions';
 
 const mapDispatchToProps = dispatch => ({
   handleSubmit(where, address, startTime, endTime, message) {
-    console.log(where);
-    event.preventDefault();
     dispatch(createPin(where, address, startTime, endTime, message));
   }
 });

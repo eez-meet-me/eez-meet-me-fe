@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { InfoWindow } from 'google-maps-react';
 
 function InformationWindow({ marker, visible, onClose, pins, ...props }) {
+
   const pin = pins.find((pin) => {
     if(pin._id === marker.id) {
       return pin;

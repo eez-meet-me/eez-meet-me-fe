@@ -1,0 +1,6 @@
+.MarkerList {
+    ul {
+      height: 80vh;
+      overflow: auto;
+    }
+}
