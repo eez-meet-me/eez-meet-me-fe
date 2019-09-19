@@ -38,6 +38,7 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <img src='./assets/pinDrop.png' className={styles.logo}></img>
+      <h2>pindrop</h2>
       <List>
         <Link component={RouterLink} to="/AboutUs">
           <ListItemText className={styles.profile}primary='Profile' />

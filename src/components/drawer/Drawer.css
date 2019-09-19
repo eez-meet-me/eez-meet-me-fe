@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
 .Drawer {
   button {
-    color: rgb(121, 183, 204);
+    color: rgb(84, 177, 194);
     font-family: roboto;
-    font-size: 1 em;
+    font-size: 1.2em;
 
   }
   ul {
@@ -16,12 +18,21 @@
   div{ 
     padding: 5px;
   }
+  h2 {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    margin-top: -6px;
+    margin-bottom: -3px;
+
+  }
+  
 }
 
 div {
   color: rgb(121, 183, 204);
   align-items: center;
 }
+
 
 
 
