@@ -1,7 +1,13 @@
 .MarkerListItem {
-  p {
-    font-size: 1em;
-    display: inline;
-    line-height: 30px;
+  
+  td {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
   }
 }

@@ -6,10 +6,11 @@ function MarkerListItem({ pin }) {
 
   return (
     <tr className={styles.MarkerListItem}> 
-      <p>Location Name: {pin.where}</p> 
-      <p>Address: {pin.address}</p>
-      <p>Start Time {pin.startTime} - End Time: {pin.endTime}</p>
-      <p>Message: {pin.message}</p>
+      <td> {pin.where}</td>
+      <td>{pin.address}</td>
+      <td>{pin.startTime} - </td>
+      <td>{pin.endTime}</td>
+      <td>{pin.message}</td>
       <DeleteButtonContainer pin={pin} />
     </tr>
   );
