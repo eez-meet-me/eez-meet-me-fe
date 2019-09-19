@@ -1,6 +1,9 @@
 .MarkerList {
     ul {
+      position: absolute;
       height: 80vh;
+      top: 62.5%;
+      width: 100%;
       overflow: auto;
     }
 }

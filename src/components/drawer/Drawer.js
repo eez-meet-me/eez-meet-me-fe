@@ -41,11 +41,10 @@ export default function TemporaryDrawer() {
       <h2>pindrop</h2>
       <List>
         <Link component={RouterLink} to="/AboutUs">
-          <ListItemText className={styles.profile}primary='Profile' />
+          <ListItemText className={styles.profile}primary='About Us' />
         </Link>
-        <Link component={RouterLink} to="/Profile">
-          <ListItemText primary='About us' />
-        </Link>
+        <Link component={RouterLink} to="/Followers">
+          <ListItemText primary='Friends' />
       </List>
     </div>
   );
