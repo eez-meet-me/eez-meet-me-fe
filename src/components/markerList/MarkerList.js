@@ -13,7 +13,7 @@ function MarkerList({ pins }) {
   });
 
   return (
-    <section className={styles.MarkerList}>
+    <section id="wow" className={styles.MarkerList}>
       <ul>
         {pinElements}
       </ul>
