@@ -15,11 +15,8 @@ import styles from './Drawer.css';
 
 const useStyles = makeStyles({
   list: {
-    width: 250,
-  },
-  fullList: {
-    width: 'auto',
-  },
+    width: 350,
+  }
 });
 
 export default function TemporaryDrawer() {
@@ -35,14 +32,15 @@ export default function TemporaryDrawer() {
 
   const sideList = side => (
     <div
-      className={classes.list}
+      className={styles.Drawer}
       role="presentation"
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
+      <img src='./assets/pinDrop.png' className={styles.logo}></img>
       <List>
         <Link component={RouterLink} to="/AboutUs">
-          <ListItemText primary='Profile' />
+          <ListItemText className={styles.profile}primary='Profile' />
         </Link>
         <Link component={RouterLink} to="/Profile">
           <ListItemText primary='About us' />

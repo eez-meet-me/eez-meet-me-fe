@@ -1,10 +1,29 @@
 .Drawer {
   button {
-    color: lightblue;
+    color: rgb(121, 183, 204);
     font-family: roboto;
     font-size: 1 em;
-    font-weight: bold;
 
   }
+  ul {
+    a {
+      color: rgb(121, 183, 204);
+      align-items: center;
+      font-size: 1em;
+    }
+  }
+  
+  div{ 
+    padding: 5px;
+  }
 }
+
+div {
+  color: rgb(121, 183, 204);
+  align-items: center;
+}
+
+
+
+
 

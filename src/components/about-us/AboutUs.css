@@ -1,15 +1,11 @@
-.Header {
+.AboutUs {
   color: rgb(121, 183, 204);
-  height: 100px;
-  background-color: rgba(51, 51, 51, 0.87);
   display: flex;
   align-items: center;
   justify-content: space-between;
   h1 {
+    margin: 0px;
     text-align: center;
   }
-}
-
-body {
-  overflow: hidden;
+  margin-top: 20px;
 }
