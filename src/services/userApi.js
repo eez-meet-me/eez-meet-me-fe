@@ -13,3 +13,12 @@ export const postUser = () => {
       })
   );
 };
+
+export const getFollowers = () => {
+  return (
+    request(`${process.env.API_URL}/users/followers`, 
+      {
+        method: 'GET'
+      })
+  );
+};
