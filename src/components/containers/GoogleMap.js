@@ -7,7 +7,7 @@ import InformationWindow from '../infoWindow/InfoWindow';
 import { getPinsList } from '../../selectors/pinSelectors';
 import { getPins } from '../../actions/pinActions';
 import Header from '../header/Header';
-import AddPinContainer from './AddPinContainer';
+import MarkerList from '../markerList/MarkerList';
 
 class GoogleMap extends Component {
 
@@ -78,7 +78,7 @@ class GoogleMap extends Component {
       <Map
         google={this.props.google}
         zoom={8}
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '100%', height: '50%' }}
         initialCenter={{ lat: 45.5234166, lng: -122.6808846 }}
       >
         <Markers onClick={this.onMarkerClick} pins={pins} />
@@ -88,6 +88,7 @@ class GoogleMap extends Component {
           onClose={this.onClose}
           pins={pins} />
       </Map>
+      <MarkerList pins={pins} />
       </>
     );
   }
