@@ -74,8 +74,6 @@ class GoogleMap extends Component {
     const { pins } = this.props;
     return (
       <>
-        {/* <AddPinContainer />
-        <UserLogout /> */}
       <Header />
       <Map
         google={this.props.google}

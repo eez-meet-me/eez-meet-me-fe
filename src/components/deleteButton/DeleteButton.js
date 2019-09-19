@@ -1,21 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
-import { useAuth0 } from '../../Auth0Provider';
 
-function DeleteButton({ pin }) {
+function DeleteButton({ pin, sub, handleDelete }) {
 
-  const { user } = useAuth0();
-
-  if(pin.authId === user.sub) {
-    return (
-      <Button>Delete</Button>
-    );
+  if(pin.user === sub) {
+    return <Button onClick={() => handleDelete(pin)}>Delete</Button>;
+  } else {
+    return <div></div>;
   }
 }
 
 DeleteButton.propTypes = {
-  pin: PropTypes.object.isRequired
+  pin: PropTypes.object.isRequired,
+  sub: PropTypes.string.isRequired,
+  handleDelete: PropTypes.func.isRequired
 };
 
 export default DeleteButton;

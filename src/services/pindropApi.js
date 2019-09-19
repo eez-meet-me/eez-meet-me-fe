@@ -5,9 +5,6 @@ export const getAllPins = () => {
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'Unable to fetch pins';
-
-      // remove after
-      // console.log(json);
       return json;
     })
     .then(json => {
@@ -17,7 +14,13 @@ export const getAllPins = () => {
 
 export const postPin = (where, address, startTime, endTime, message) => {
   return request(`${process.env.API_URL}/pins`, {
-    method: 'Post',
+    method: 'POST',
     body: JSON.stringify({ where, address, startTime, endTime, message })
+  });
+};
+
+export const deletePin = (pin) => {
+  return request(`${process.env.API_URL}/pins/${pin._id}`, {
+    method: 'DELETE'
   });
 };
