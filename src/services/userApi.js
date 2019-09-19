@@ -16,9 +16,16 @@ export const postUser = () => {
 
 export const getFollowers = () => {
   return (
-    request(`${process.env.API_URL}/users/followers`, 
+    request(`${process.env.API_URL}/users/followers`)
+  );
+};
+
+export const postFollower = (email) => {
+  return (
+    request(`${process.env.API_URL}/users/followers`,
       {
-        method: 'GET'
+        method: 'PATCH',
+        body: JSON.stringify({ email })
       })
   );
 };

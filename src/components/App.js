@@ -7,6 +7,7 @@ import {
 import GoogleMap from '../components/containers/GoogleMap';
 import Profile from '../components/profile/Profile';
 import AboutUs from '../components/about-us/AboutUs';
+import FollowersContainer from './containers/FollowersContainer';
 import { withSession } from '../Auth0Provider';
 
 export default function App() {
@@ -15,7 +16,7 @@ export default function App() {
       <Router>
         <Switch>
           <Route path="/AboutUs" component={withSession(Profile)}/>
-          <Route path="/Profile" component={withSession(AboutUs)}/>
+          <Route path="/Followers" component={withSession(FollowersContainer)}/>
           <Route path="/" component={withSession(GoogleMap)}/>
         </Switch>
       </Router>

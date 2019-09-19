@@ -4,9 +4,11 @@ import FollowerListItem from './FollowerListItem';
 
 function FollowersList({ followers }) {
   const followerElements = followers.map(follower => {
-    <li key={follower._id}>
-      <FollowerListItem follower={follower} />
-    </li>;
+    return (
+      <li key={follower._id}>
+        <FollowerListItem follower={follower} />
+      </li>
+    );
   });
 
   return (

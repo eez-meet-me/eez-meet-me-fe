@@ -44,8 +44,8 @@ export default function TemporaryDrawer() {
         <Link component={RouterLink} to="/AboutUs">
           <ListItemText primary='Profile' />
         </Link>
-        <Link component={RouterLink} to="/Profile">
-          <ListItemText primary='About us' />
+        <Link component={RouterLink} to="/Followers">
+          <ListItemText primary='Followers' />
         </Link>
       </List>
     </div>
