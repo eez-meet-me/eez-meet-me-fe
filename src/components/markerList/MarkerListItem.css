@@ -1,6 +1,7 @@
 .MarkerListItem {
   p {
     font-size: 1em;
+    display: inline;
+    line-height: 30px;
   }
-
 }

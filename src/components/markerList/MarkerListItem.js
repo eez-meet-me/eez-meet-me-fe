@@ -5,13 +5,13 @@ import DeleteButtonContainer from '../containers/DeleteButtonContainer';
 function MarkerListItem({ pin }) {
 
   return (
-    <section className={styles.MarkerListItem}>
-      <p>{pin.where}</p>
-      <p>{pin.address}</p>
-      <p>{pin.startTime} - {pin.endTime}</p>
-      <p>{pin.message}</p>
+    <tr className={styles.MarkerListItem}> 
+      <p>Location Name: {pin.where}</p> 
+      <p>Address: {pin.address}</p>
+      <p>Start Time {pin.startTime} - End Time: {pin.endTime}</p>
+      <p>Message: {pin.message}</p>
       <DeleteButtonContainer pin={pin} />
-    </section>
+    </tr>
   );
 }
 

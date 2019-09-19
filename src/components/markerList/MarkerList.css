@@ -1,9 +1,14 @@
 .MarkerList {
-    ul {
+    table {
+      padding-top: 10px;
       position: absolute;
       height: 80vh;
       top: 62.5%;
       width: 100%;
       overflow: auto;
+    }
+
+    td {
+      margin: 20px;
     }
 }

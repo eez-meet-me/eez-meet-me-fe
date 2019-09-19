@@ -6,17 +6,17 @@ import styles from './MarkerList.css';
 function MarkerList({ pins }) {
   const pinElements = pins.map(pin => {
     return (
-      <li key={pin._id}>
+      <td key={pin._id}>
         <MarkerListItem pin={pin} />
-      </li>
+      </td>
     );
   });
 
   return (
     <section id="wow" className={styles.MarkerList}>
-      <ul>
+      <table>
         {pinElements}
-      </ul>
+      </table>
     </section>
   );
 }
