@@ -4,14 +4,45 @@ body{
 
 .AboutUs {
   color: rgb(119, 221, 255);
-  display: flex;
   justify-content: center;
   text-align: center;
-    h1 {
-      text-align: center;
-      align-items: center;
+  flex-direction: row;
+  h1 {
+    text-align: center;
+    align-items: center;
+  }
+  .us {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 250px;
+    max-height: 80px;
+
+    p {
+      width: 200px;
+      display: flex;
+      
     }
+
+    .text {
+      display: flex;
+      align-content: center;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .Erin {
+      height: 268px;
+      margin-top: 50px;
+    }
+
+    .Links {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
 }
-  
+
+
 
 

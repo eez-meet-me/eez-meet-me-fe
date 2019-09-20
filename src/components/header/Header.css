@@ -15,8 +15,7 @@
   button {
     font-size: 1.2em;
   }
-}
-
-body {
-  overflow: hidden;
+  body {
+    overflow: hidden
+  }
 }
