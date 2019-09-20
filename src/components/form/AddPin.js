@@ -21,7 +21,7 @@ function AddPin({ handleSubmit }) {
       Address<input onChange={({ target }) => updateAddress(target.value)} type="text" value={address} name="address" placeholder="Type here"></input>
       Start time<input onChange={({ target }) => updateStartTime(target.value)} type="time" value={startTime} name="startTime" placeholder="Type here"></input>
       End time<input onChange={({ target }) => updateEndTime(target.value)} type="time" value={endTime} name="endTime" placeholder="Type here"></input>
-      Messsage<input onChange={({ target }) => updateMessage(target.value)} type="text" value={message} name="message" placeholder="Type here"></input>
+      Message<input onChange={({ target }) => updateMessage(target.value)} type="text" value={message} name="message" placeholder="Type here"></input>
     </form>
   );
 }

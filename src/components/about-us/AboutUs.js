@@ -19,6 +19,7 @@ function AboutUs() {
             <a href='https://www.linkedin.com/in/eli-nicholson/'>GitHub</a>
           </section>
         </section>
+        
         <section>
           <h3>Zach</h3>
           <img className={styles.Zach}src='./assets/zach.png'></img>
@@ -27,8 +28,8 @@ function AboutUs() {
             <a href='https://github.com/zach-ryan-butler'>LinkedIn</a>
             <a href='https://www.linkedin.com/in/zach-ryan-butler/'>GitHub</a>
           </section>
-
         </section>
+
         <section>
           <h3>Erin</h3>
           <img className={styles.Erin} src='./assets/erin.png'></img>
