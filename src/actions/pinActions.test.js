@@ -6,7 +6,9 @@ import { GET_PINS, getPins } from './pinActions';
 
 describe('pin actions', () => {
   const payload = {};
+
   getAllPins.mockReturnValue(payload);
+  
   it('can get all pins', () => {
     const action = getPins();
     expect(action.type).toBe(GET_PINS);

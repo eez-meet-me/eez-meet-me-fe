@@ -17,7 +17,7 @@ function addFollower({ handleSubmit }) {
         type="text"
         value={email}
         onChange={({ target }) => updateEmail(target.value)}
-        placeholder="email..."/>
+        placeholder="enter your friends email..."/>
       <Button>Submit</Button>
     </form>
   );
