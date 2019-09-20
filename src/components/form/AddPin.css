@@ -1,7 +1,7 @@
 .addPinForm {
   display: flex;
   flex-direction: column;
-  color: rgb(121, 183, 204); 
+  color: rgb(119, 221, 255); 
   margin-left: 10px;
   margin-right: 10px;
   font-family: roboto;
@@ -10,7 +10,7 @@
 }
 
 button {
-  color: rgb(121, 183, 204); 
+  color: rgb(119, 221, 255); 
   font-size: 1em;
 }
 

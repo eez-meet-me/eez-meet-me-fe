@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
 .MarkerList {
  
   position: absolute;
@@ -10,14 +12,20 @@
   text-align: center;
   padding: 20px;
   overflow: auto;
- 
+
   thead {
     display: block;
     tr {
       width: 100%;
-      background: blue;
       display: flex;
       justify-content: space-around;
+    }
+    th {
+      font-size: 1.5em;
+      color: white;
+      font-weight: lighter;
+      font-family: 'Fredoka One', cursive;
+
     }
   }
   
@@ -30,6 +38,7 @@
     tr {
       width: 100%;
       display: grid;
+      line-height: 2;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       td {
         align-self: center;
