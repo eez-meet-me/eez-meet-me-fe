@@ -2,14 +2,14 @@
 
 .Drawer {
   button {
-    color: rgb(84, 177, 194);
-    font-family: roboto;
+    color: rgb(119, 221, 255);
+    font-family: 'Fredoka One', cursive;
     font-size: 1.2em;
 
   }
   ul {
     a {
-      color: rgb(121, 183, 204);
+      color: rgb(119, 221, 255);
       align-items: center;
       font-size: 1em;
     }
@@ -17,6 +17,7 @@
   
   div{ 
     padding: 5px;
+    background-color: gray;
   }
   h2 {
     text-align: center;
@@ -29,7 +30,7 @@
 }
 
 div {
-  color: rgb(121, 183, 204);
+  color: rgb(119, 221, 255);
   align-items: center;
 }
 
