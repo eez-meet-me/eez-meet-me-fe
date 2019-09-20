@@ -5,6 +5,8 @@ import FollowersList from '../followersList/FollowersList';
 import AddFollower from '../form/AddFollower';
 import { getFollowersList } from '../../selectors/followerSelectors';
 import { fetchFollowers, createFollower } from '../../actions/userActions';
+import Header from '../header/Header';
+import styles from './FollowersContainer.css';
 
 class FollowersContainer extends Component {
 
@@ -22,8 +24,11 @@ class FollowersContainer extends Component {
     const { followers, handleSubmit } = this.props;
     return (
       <>
-        <AddFollower handleSubmit={handleSubmit}/>
-        <FollowersList followers={followers}/>
+        <Header />
+        <section className={styles.followersContainer}>
+          <AddFollower handleSubmit={handleSubmit}/>
+          <FollowersList followers={followers}/>
+        </section>
       </>
     );
   }

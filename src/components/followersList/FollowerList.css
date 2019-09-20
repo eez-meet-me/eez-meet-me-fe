@@ -1,0 +1,8 @@
+.followerList {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    font-size: 1.3em;
+  }
+}
