@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
 import styles from './AddFollower.css';
 
 function addFollower({ handleSubmit }) {
@@ -18,7 +17,7 @@ function addFollower({ handleSubmit }) {
         value={email}
         onChange={({ target }) => updateEmail(target.value)}
         placeholder="enter your friends email..."/>
-      <Button>Submit</Button>
+      <button>Submit</button>
     </form>
   );
 }
