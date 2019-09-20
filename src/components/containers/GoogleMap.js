@@ -76,7 +76,7 @@ class GoogleMap extends Component {
         <Map
           google={this.props.google}
           zoom={8}
-          style={{ width: '100%', height: '50%' }}
+          style={{ width: '100%', height: '60%' }}
           initialCenter={{ lat: 45.5234166, lng: -122.6808846 }}
         >
           <Markers onClick={this.onMarkerClick} pins={pins} />
