@@ -15,8 +15,14 @@
   button {
     font-size: 1.2em;
   }
-}
+  a {
+    color: rgb(119, 221, 255);
+    text-decoration: none;
+  }
 
-body {
-  overflow: hidden;
+  a:hover {
+    color: rgb(119, 221, 255);
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
