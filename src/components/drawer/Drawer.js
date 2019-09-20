@@ -35,7 +35,7 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <ReactLink to='/'>
-        <img src='./assets/pinDrop.png' className={styles.logo}></img>
+        <img src='https://i.postimg.cc/fbpmctYD/pinDrop.png' className={styles.logo}></img>
       </ReactLink>
       <h2>pindrop</h2>
       <List>
