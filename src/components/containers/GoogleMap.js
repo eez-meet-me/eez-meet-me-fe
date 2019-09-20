@@ -39,11 +39,9 @@ class GoogleMap extends Component {
     //   return true;
     // }
 
-    //ryan code
     return nextState.activeMarker !== this.state.activeMarker ||
       nextProps.pins.length !== this.props.pins.length ||
       !nextProps.pins.every((pin, i) => pin._id === this.props.pins[i]._id);
-      
   }
 
   state = {
@@ -75,20 +73,20 @@ class GoogleMap extends Component {
     return (
       <>
       <Header />
-      <Map
-        google={this.props.google}
-        zoom={8}
-        style={{ width: '100%', height: '50%' }}
-        initialCenter={{ lat: 45.5234166, lng: -122.6808846 }}
-      >
-        <Markers onClick={this.onMarkerClick} pins={pins} />
-        <InformationWindow
-          marker={activeMarker}
-          visible={showingInfoWindow}
-          onClose={this.onClose}
-          pins={pins} />
-      </Map>
-      <MarkerList pins={pins} />
+        <Map
+          google={this.props.google}
+          zoom={8}
+          style={{ width: '100%', height: '50%' }}
+          initialCenter={{ lat: 45.5234166, lng: -122.6808846 }}
+        >
+          <Markers onClick={this.onMarkerClick} pins={pins} />
+          <InformationWindow
+            marker={activeMarker}
+            visible={showingInfoWindow}
+            onClose={this.onClose}
+            pins={pins} />
+        </Map>
+        <MarkerList pins={pins} />
       </>
     );
   }
