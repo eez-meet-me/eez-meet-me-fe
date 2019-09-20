@@ -11,10 +11,14 @@
 
 button {
   color: rgb(119, 221, 255); 
-  font-size: 1em;
+  font-size: 1.3em;
+  border-radius: 50px;
 }
 
 input {
+  border-radius: 40px;
   background: lightgray;
   height: 25px;
+  text-align: center; 
+  justify-content: center;
 }
