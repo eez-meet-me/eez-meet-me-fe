@@ -1,12 +1,40 @@
 .MarkerList {
-    table {
-      padding-top: 10px;
-      position: absolute;
-      height: 80vh;
-      top: 62.5%;
+ 
+  position: absolute;
+  z-index: 300;
+  height: 80vh;
+  top: 62.5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  overflow: auto;
+ 
+  thead {
+    display: block;
+    tr {
       width: 100%;
-      overflow: auto;
+      background: blue;
       display: flex;
-      flex-direction: column;
+      justify-content: space-around;
     }
+  }
+  
+  tbody {
+    overflow: scroll;
+    height: 20rem;
+    display: block;
+    height: 300px;
+    
+    tr {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      td {
+        align-self: center;
+        display: inline;
+      }
+    }
+  }
 }
