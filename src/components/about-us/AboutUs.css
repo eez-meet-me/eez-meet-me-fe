@@ -1,16 +1,17 @@
+body{
+  background-color: rgba(73, 73, 73, 0.87);
+}
+
 .AboutUs {
   color: rgb(119, 221, 255);
   display: flex;
-  h1 {
-    margin: 0px;
-    text-align: center;
-    align-items: center;
-  }
-  margin-top: 20px;
-  
+  justify-content: center;
+  text-align: center;
+    h1 {
+      text-align: center;
+      align-items: center;
+    }
 }
-    body{
-      background-color: rgba(73, 73, 73, 0.87);
-      }
+  
 
 
