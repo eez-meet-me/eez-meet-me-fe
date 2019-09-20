@@ -10,7 +10,7 @@ exports[`App component renders App 1`] = `
       />
       <Route
         component={[Function]}
-        path="/Profile"
+        path="/Followers"
       />
       <Route
         component={[Function]}
