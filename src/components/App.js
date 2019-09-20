@@ -5,7 +5,7 @@ import {
   Switch
 } from 'react-router-dom';
 import GoogleMap from '../components/containers/GoogleMap';
-import Profile from '../components/profile/Profile';
+import Followers from '../components/followers/Followers';
 import AboutUs from '../components/about-us/AboutUs';
 import { withSession } from '../Auth0Provider';
 
@@ -14,8 +14,8 @@ export default function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/AboutUs" component={withSession(Profile)}/>
-          <Route path="/Profile" component={withSession(AboutUs)}/>
+          <Route path="/AboutUs" component={withSession(AboutUs)}/>
+          <Route path="/Followers" component={withSession(Followers)}/>
           <Route path="/" component={withSession(GoogleMap)}/>
         </Switch>
       </Router>

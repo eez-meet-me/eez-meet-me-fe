@@ -16,12 +16,12 @@ function AddPin({ handleSubmit }) {
 
   return (
     <form className={styles.addPinForm} onSubmit={onSubmit}>
-      Where<input onChange={({ target }) => updateWhere(target.value)} type="text" value={where} name="where"></input>
-      Address<input onChange={({ target }) => updateAddress(target.value)} type="text" value={address} name="address"></input>
-      Start time<input onChange={({ target }) => updateStartTime(target.value)} type="text" value={startTime} name="startTime"></input>
-      End time<input onChange={({ target }) => updateEndTime(target.value)} type="text" value={endTime} name="endTime"></input>
-      Messsage<input onChange={({ target }) => updateMessage(target.value)} type="text" value={message} name="message"></input>
-      <button>Post event</button>
+      <button>Post a pin</button>
+      Location name<input onChange={({ target }) => updateWhere(target.value)} type="text" value={where} name="where" placeholder="Type here"></input>
+      Address<input onChange={({ target }) => updateAddress(target.value)} type="text" value={address} name="address" placeholder="Type here"></input>
+      Start time<input onChange={({ target }) => updateStartTime(target.value)} type="text" value={startTime} name="startTime" placeholder="Type here"></input>
+      End time<input onChange={({ target }) => updateEndTime(target.value)} type="text" value={endTime} name="endTime" placeholder="Type here"></input>
+      Messsage<input onChange={({ target }) => updateMessage(target.value)} type="text" value={message} name="message" placeholder="Type here"></input>
     </form>
   );
 }

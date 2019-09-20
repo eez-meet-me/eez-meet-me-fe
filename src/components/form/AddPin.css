@@ -1,4 +1,20 @@
 .addPinForm {
   display: flex;
   flex-direction: column;
+  color: rgb(121, 183, 204); 
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: roboto;
+  width: 200px;
+  font-size: 1.2em;
+}
+
+button {
+  color: rgb(121, 183, 204); 
+  font-size: 1em;
+}
+
+input {
+  background: lightgray;
+  height: 25px;
 }

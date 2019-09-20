@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { InfoWindow } from 'google-maps-react';
 
 function InformationWindow({ marker, visible, onClose, pins, ...props }) {
+
   const pin = pins.find((pin) => {
     if(pin._id === marker.id) {
       return pin;
@@ -16,10 +17,10 @@ function InformationWindow({ marker, visible, onClose, pins, ...props }) {
       onClose={onClose}
     >
       <section>
-        <h3>{pin.where}</h3>
-        <p>{pin.address}</p>
-        <p>{pin.startTime} - {pin.endTime}</p>
-        <p>{pin.message}</p>
+        <h4>Where: {pin.where}</h4>
+        <h4>Address: {pin.address}</h4>
+        <h4>Start Time: {pin.startTime} - End Time: {pin.endTime}</h4>
+        <h4>Message: {pin.message}</h4>
       </section>
     </InfoWindow>
   );

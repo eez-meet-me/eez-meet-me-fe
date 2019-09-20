@@ -6,6 +6,14 @@ exports[`App component renders App 1`] = `
     <Switch>
       <Route
         component={[Function]}
+        path="/AboutUs"
+      />
+      <Route
+        component={[Function]}
+        path="/Followers"
+      />
+      <Route
+        component={[Function]}
         path="/"
       />
     </Switch>

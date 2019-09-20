@@ -7,7 +7,7 @@ function Header() {
   return (
     <section className={styles.Header}>
       <Drawer />
-      <h1>Pindrop</h1>
+      <h1>pindrop</h1>
       <UserLogout />
     </section>
   );
