@@ -21,24 +21,10 @@ class GoogleMap extends Component {
     this.props.fetch();
     setInterval(() => {
       this.props.fetch();
-    }, 10000);
+    }, 2000);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-
-    //new code
-    // if(nextProps.pins.length === this.props.pins.length || 
-    //   nextProps.pins.every((pin, i) => pin && this.props.pins[i] 
-    //   console.log(this.props.pins);
-    //   && pin._id === this.props.pins[i]._id)) {
-    //   console.log('false');
-    //   return false;
-    // } else {
-    //   console.log('true');
-
-    //   return true;
-    // }
-
     return nextState.activeMarker !== this.state.activeMarker ||
       nextProps.pins.length !== this.props.pins.length ||
       !nextProps.pins.every((pin, i) => pin._id === this.props.pins[i]._id);
@@ -76,7 +62,7 @@ class GoogleMap extends Component {
         <Map
           google={this.props.google}
           zoom={8}
-          style={{ width: '100%', height: '50%' }}
+          style={{ width: '100%', height: '60%' }}
           initialCenter={{ lat: 45.5234166, lng: -122.6808846 }}
         >
           <Markers onClick={this.onMarkerClick} pins={pins} />

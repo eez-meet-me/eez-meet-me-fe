@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import createAuth0Client from '@auth0/auth0-spa-js';
 import { setToken } from './services/request';
-import { getUsers, postUser } from './services/userApi';
+import { postUser } from './services/userApi';
 
 const DEFAULT_REDIRECT_CALLBACK = () => {
   window.history.pushState({},
@@ -23,6 +23,7 @@ export const withSession = Comp => {
   };
 };
 
+// eslint-disable-next-line react/prop-types
 export default function Auth0Provider({ children, onRedirectCallback = DEFAULT_REDIRECT_CALLBACK, ...initOptions }) {
   const [isAuthenticated, updateIsAuthenticated] = useState(false);
   const [user, setUser] = useState();

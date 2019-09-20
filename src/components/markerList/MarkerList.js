@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './MarkerList.css';
+import DeleteButtonContainer from '../containers/DeleteButtonContainer';
 
 function MarkerList({ pins }) {
   const pinElements = pins.map(pin => {
@@ -11,6 +12,7 @@ function MarkerList({ pins }) {
         <td>{pin.startTime}</td>
         <td>{pin.endTime}</td>
         <td>{pin.message}</td>
+        <DeleteButtonContainer pin={pin} />
       </tr>
     );
   });

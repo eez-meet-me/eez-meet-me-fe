@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FollowerListItem from './FollowerListItem';
+import styles from './FollowerList.css';
 
 function FollowersList({ followers }) {
   const followerElements = followers.map((follower, i) => {
@@ -12,9 +13,11 @@ function FollowersList({ followers }) {
   });
 
   return (
-    <ul>
-      {followerElements}
-    </ul>
+    <section>
+      <ul className={styles.followerList}>
+        {followerElements}
+      </ul>
+    </section>
   );
 }
 
