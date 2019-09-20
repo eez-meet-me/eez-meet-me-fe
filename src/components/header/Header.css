@@ -15,7 +15,6 @@
   button {
     font-size: 1.2em;
   }
-
   a {
     color: rgb(119, 221, 255);
     text-decoration: none;
@@ -25,9 +24,7 @@
     color: rgb(119, 221, 255);
     text-decoration: none;
     cursor: pointer;
+  body {
+    overflow: hidden
   }
-}
-
-body {
-  overflow: hidden;
 }
