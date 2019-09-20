@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function FollowerListItem({ follower }) {
+  console.log(follower);
   return (
     <section>
       <p>{follower.email}</p>

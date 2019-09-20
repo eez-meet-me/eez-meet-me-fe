@@ -21,7 +21,7 @@ class GoogleMap extends Component {
     this.props.fetch();
     setInterval(() => {
       this.props.fetch();
-    }, 2000);
+    }, 10000);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
