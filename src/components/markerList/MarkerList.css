@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
+.MarkerList {
+ 
+  position: absolute;
+  z-index: 300;
+  height: 80vh;
+  top: 62.5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 95px;
+  overflow: auto;
+
+  thead {
+    display: block;
+    tr {
+      width: 85%;
+      display: flex;
+      justify-content: space-around;
+    }
+    th {
+      font-size: 1.5em;
+      color: white;
+      font-weight: lighter;
+      font-family: 'Fredoka One', cursive;
+
+    }
+  }
+  
+  tbody {
+    overflow: scroll;
+    height: 20rem;
+    display: block;
+    height: 200px;
+    width: 88%;
+    
+    tr {
+      width: 100%;
+      display: grid;
+      line-height: 2;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      td {
+        align-self: center;
+        display: inline;
+      }
+    }
+  }
+}

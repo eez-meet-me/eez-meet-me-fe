@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
+.Drawer {
+  button {
+    color: rgb(119, 221, 255);
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2em;
+    padding: 20px;
+    align-items: center;
+    display: flex;
+
+  }
+  ul {
+    a {
+      color: rgb(119, 221, 255);
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      font-size: 1em;
+    }
+  }
+  
+  div{ 
+    padding: 5px;
+    background-color: gray;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+  }
+  h2 {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    margin-top: -6px;
+    margin-bottom: -3px;
+
+  }
+
+  
+}
+
+div {
+  color: rgb(119, 221, 255);
+  align-items: center;
+}
+
+
+
+
+
+

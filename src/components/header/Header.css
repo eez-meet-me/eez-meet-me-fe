@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
+
+.Header {
+  color: rgb(119, 221, 255);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  h1 {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5em;
+  }
+  button {
+    font-size: 1.2em;
+  }
+  a {
+    color: rgb(119, 221, 255);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(119, 221, 255);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
